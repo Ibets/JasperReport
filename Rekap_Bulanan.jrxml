@@ -79,7 +79,7 @@ on Pembayaran.No_Pesanan = Pesanan.No_Pesanan ]]>
 			<frame>
 				<reportElement mode="Opaque" x="-20" y="70" width="740" height="32" forecolor="#000000" backcolor="#9BD9EB" uuid="b0c895f6-6dbd-477d-9858-9ad66af087e1"/>
 				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement x="370" y="10" width="144" height="20" forecolor="#FFFFFF" uuid="a33fce3b-20c1-4696-873a-fe134d1e7d88"/>
+					<reportElement x="582" y="10" width="144" height="20" forecolor="#FFFFFF" uuid="a33fce3b-20c1-4696-873a-fe134d1e7d88"/>
 					<textElement textAlignment="Right">
 						<font size="12"/>
 					</textElement>
