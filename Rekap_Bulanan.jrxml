@@ -13,9 +13,11 @@
 			<style mode="Opaque" backcolor="#F0EFEF"/>
 		</conditionalStyle>
 	</style>
+	<parameter name="Bulan" class="java.lang.String"/>
 	<queryString language="SQL">
 		<![CDATA[Select * from Pembayaran Join Pesanan 
-on Pembayaran.No_Pesanan = Pesanan.No_Pesanan ]]>
+on Pembayaran.No_Pesanan = Pesanan.No_Pesanan 
+Where Month(Tanggal_Pesanan) =  $P{Bulan}]]>
 	</queryString>
 	<field name="No_Pembayaran" class="java.lang.Integer">
 		<property name="com.jaspersoft.studio.field.name" value="No_Pembayaran"/>
@@ -37,6 +39,10 @@ on Pembayaran.No_Pesanan = Pesanan.No_Pesanan ]]>
 		<property name="com.jaspersoft.studio.field.name" value="Total"/>
 		<property name="com.jaspersoft.studio.field.label" value="Total"/>
 	</field>
+	<field name="COLUMN_6" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="No_Pesanan"/>
+		<property name="com.jaspersoft.studio.field.label" value="No_Pesanan"/>
+	</field>
 	<field name="Tanggal_Pesanan" class="java.sql.Date">
 		<property name="com.jaspersoft.studio.field.name" value="Tanggal_Pesanan"/>
 		<property name="com.jaspersoft.studio.field.label" value="Tanggal_Pesanan"/>
@@ -44,6 +50,10 @@ on Pembayaran.No_Pesanan = Pesanan.No_Pesanan ]]>
 	<field name="Alamat_Tujuan" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="Alamat_Tujuan"/>
 		<property name="com.jaspersoft.studio.field.label" value="Alamat_Tujuan"/>
+	</field>
+	<field name="COLUMN_9" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Total"/>
+		<property name="com.jaspersoft.studio.field.label" value="Total"/>
 	</field>
 	<field name="Username" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="Username"/>
@@ -79,7 +89,7 @@ on Pembayaran.No_Pesanan = Pesanan.No_Pesanan ]]>
 			<frame>
 				<reportElement mode="Opaque" x="-20" y="70" width="740" height="32" forecolor="#000000" backcolor="#9BD9EB" uuid="b0c895f6-6dbd-477d-9858-9ad66af087e1"/>
 				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement x="582" y="10" width="144" height="20" forecolor="#FFFFFF" uuid="a33fce3b-20c1-4696-873a-fe134d1e7d88"/>
+					<reportElement x="590" y="12" width="144" height="20" forecolor="#FFFFFF" uuid="a33fce3b-20c1-4696-873a-fe134d1e7d88"/>
 					<textElement textAlignment="Right">
 						<font size="12"/>
 					</textElement>
@@ -270,3 +280,4 @@ on Pembayaran.No_Pesanan = Pesanan.No_Pesanan ]]>
 		<band splitType="Stretch"/>
 	</summary>
 </jasperReport>
+
